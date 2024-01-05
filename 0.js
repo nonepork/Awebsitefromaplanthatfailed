@@ -2,7 +2,7 @@ const textContent = document.getElementById("dec")
 const form = document.getElementById('form');
 
 const button = document.getElementById('button');
-const box = document.getElementById('discordname')
+const box = document.getElementById('id_field')
 const iris = document.getElementById('iris')
 const pupil = document.getElementById('pupil')
 const coolbox = document.getElementById('coolbox')
@@ -17,7 +17,7 @@ form.addEventListener('submit', function(e) {
     setTimeout(function(){
         textContent.style.transform = "scale(" + 2 + ")";
         setTimeout(function(){
-            var typing=new Typed(textContent, {
+            new Typed(textContent, {
                 strings: ["", "Thanks for your participation", "You will be inform soon"],
                 typeSpeed: 100,
                 backSpeed: 40,
