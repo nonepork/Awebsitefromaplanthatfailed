@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+    background: #1E1E1E;
+    height: 100vh;
+    overflow: hidden;
+}
+.iris{
+    position: fixed;
+    top: -2%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 30px;
+    color: white;
+}
+.pupil{
+    position: fixed;
+    top: -2%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 30px;
+    background:linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 0 0/100% 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    animation: a 2s linear infinite;
+}
+@keyframes a {
+    to {background-position:0 -200%}
+}
+.center{
+    position :fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333333;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: white;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.input_div input{
+    position: relative;
+    left:-25px;
+    top: -20px;
+    padding: 0 10px;
+    height: 40px;
+    width: 420px;
+    font-size: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #b9f999;
+    border: 0px;
+    border-radius: 3px;
+    background-color: grey;
+    margin-top: -90%;
+    transition: box-shadow .3s;
+}
+.input_div input:hover{
+    transition: .5s; /* Not necessary but feels smooth */
+    outline: none;
+    border-color: #b9f999;
+    box-shadow: 0 0 10px #b9f999;
+}
+.input_div input:focus{
+    outline: none;
+    border-color: #b9f999;
+    box-shadow: 0 0 10px #b9f999;
+}
+input[type="submit"]{
+    position: relative;
+    left: 419px;
+    top: -60px;
+    width:10%;
+    height: 40px;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    background: grey;
+    outline: none;
+    border: 0px;
+    border-radius: 3px;
+    transition: box-shadow .3s;
+}
+input[type="submit"]:hover{
+    transition: .5s; /* Not necessary but feels smooth */
+    outline: none;
+    border-color: #b9f999;
+    box-shadow: 0 0 10px #b9f999;
+}
+#decide
+{
+    transform: scale(1);
+    transition: transform 0.6s ease-in-out;
+}
