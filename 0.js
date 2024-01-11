@@ -8,18 +8,20 @@ const pupil = document.getElementById('pupil')
 const coolbox = document.getElementById('coolbox')
 
 form.addEventListener('submit', function(e) {
+    const value = document.getElementById("input_bar").value
     e.preventDefault(); // don't submit
     button.style.display = "none";
     box.style.display = "none";
     iris.style.display = "none";
     pupil.style.display = "none";
     coolbox.style.backgroundColor = "#1E1E1E";
+    console.log(value)
     setTimeout(function(){
         textContent.style.transform = "scale(" + 2 + ")";
         setTimeout(function(){
             new Typed(textContent, {
-                strings: ["", "Thanks for your participation", "You will be inform soon"],
-                typeSpeed: 100,
+                strings: ["", "Thanks for your participation"],
+                typeSpeed: 120,
                 backSpeed: 40,
                 startDelay: 100,
                 showCursor: false,
