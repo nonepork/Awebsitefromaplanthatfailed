@@ -8,14 +8,21 @@ const pupil = document.getElementById('pupil')
 const coolbox = document.getElementById('coolbox')
 
 form.addEventListener('submit', function(e) {
+    e.preventDefault();
     const value = document.getElementById("input_bar").value
-    e.preventDefault(); // don't submit
+    fetch('/goblet_of_fire', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ value: value })
+    });
+
     button.style.display = "none";
     box.style.display = "none";
     iris.style.display = "none";
     pupil.style.display = "none";
     coolbox.style.backgroundColor = "#1E1E1E";
-    console.log(value)
     setTimeout(function(){
         textContent.style.transform = "scale(" + 2 + ")";
         setTimeout(function(){
