@@ -1,11 +1,12 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    font-family: 'JetBrains Mono', monospace;
-    background: #1E1E1E;
+    font-family: "JetBrains Mono", monospace;
     height: 100vh;
     overflow: hidden;
+    background: #1E1E1E;
 }
+
 .intro {
     position: fixed;
     top: 0;
@@ -21,6 +22,7 @@ body{
     text-align: center;
     z-index: 100;
 }
+
 .middle-cross::after,
 .middle-cross::before {
     position: fixed;
@@ -32,14 +34,17 @@ body{
     transform: translate(-50%, -50%) scale(1.2);
     animation: ka 2s forwards;
 }
+
 .middle-cross::after { /* Foreground */
     background: red;
     background-clip: text;
     color: transparent;
 }
+
 .middle-cross::before { /* Shadow */
     color: transparent;
 }
+
 .v-and-h-cross {
     top: 19%;
     width: 10px;
@@ -53,11 +58,13 @@ body{
         0 0 60px 15px red,
         0 0 90px 20px red;
 }
+
 .v-and-h-cross:nth-child(1) {
     top: 19%;
     left: 50%;
     animation: ig 2s forwards;
 }
+
 .v-and-h-cross:nth-child(2) {
     top: 19%;
     left: 50%;
@@ -65,6 +72,7 @@ body{
     height: 150px;
     animation: an 2s forwards;
 }
+
 @keyframes ka {
     0% {
         transform: translate(-50%, -50%) scale(1.2);
@@ -90,6 +98,7 @@ body{
         opacity: 0;
     }
 }
+
 @keyframes an {
     0% {
         transform: translate(-50%, -50%) rotate(90deg) scale(1);
@@ -107,6 +116,7 @@ body{
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
+
 .iris{
     position: fixed;
     top: -2%;
@@ -114,7 +124,6 @@ body{
     transform: translate(-50%, 0%);
     font-family: 'JetBrains Mono', monospace;
     font-size: 30px;
-    color: white;
 }
 .pupil{
     position: fixed;
@@ -123,83 +132,5 @@ body{
     transform: translate(-50%, 0%);
     font-family: 'JetBrains Mono', monospace;
     font-size: 30px;
-    background:linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 0 0/100% 200%;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-clip: text;
-    animation: a 2s linear infinite;
-}
-@keyframes a {
-    to {background-position:0 -200%}
-}
-.center{
-    position :fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #333333;
-    border-radius: 10px;
-}
-.center h1{
-    text-align: center;
-    padding: 0 0 20px 0;
-    color: white;
-}
-.center form{
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-.input_div input{
-    position: relative;
-    left:-25px;
-    top: -20px;
-    padding: 0 10px;
-    height: 40px;
-    width: 420px;
-    font-size: 22px;
-    font-family: 'JetBrains Mono', monospace;
-    color: #b9f999;
-    border: 0px;
-    border-radius: 3px;
-    background-color: grey;
-    margin-top: -90%;
-    transition: box-shadow .3s;
-}
-.input_div input:hover{
-    transition: .5s; /* Not necessary but feels smooth */
-    outline: none;
-    border-color: #b9f999;
-    box-shadow: 0 0 10px #b9f999;
-}
-.input_div input:focus{
-    outline: none;
-    border-color: #b9f999;
-    box-shadow: 0 0 10px #b9f999;
-}
-input[type="submit"]{
-    position: relative;
-    left: 419px;
-    top: -60px;
-    width:10%;
-    height: 40px;
-    color: white;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: bold;
-    font-size: 20px;
-    background: grey;
-    outline: none;
-    border: 0px;
-    border-radius: 3px;
-    transition: box-shadow .3s;
-}
-input[type="submit"]:hover{
-    transition: .5s; /* Not necessary but feels smooth */
-    outline: none;
-    border-color: #b9f999;
-    box-shadow: 0 0 10px #b9f999;
-}
-#decide
-{
-    transform: scale(1);
-    transition: transform 0.6s ease-in-out;
+    color: red;
 }

@@ -52,7 +52,7 @@ app.post('/goblet_of_fire', (req, res) => {
     const data = {
         identification: req.body.value
     }
-    // Add your filter here
+    // TODO: add sanitization and filters
     collection.insertMany(data);
     res.end();
 });
