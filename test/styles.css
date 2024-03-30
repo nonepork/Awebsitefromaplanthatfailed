@@ -1,130 +1,11 @@
-body {
+body{
     margin: 0;
     padding: 0;
-    font-family: "JetBrains Mono", monospace;
+    font-family: 'JetBrains Mono', monospace;
+    background: #1E1E1E;
     height: 100vh;
     overflow: hidden;
-    background: #1E1E1E;
 }
-
-.intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 100;
-}
-
-.middle-cross::after,
-.middle-cross::before {
-    position: fixed;
-    top: 19%;
-    left: 50%;
-    content: "\2726";
-    font-size: 8rem;
-    text-shadow: 0 0 12px red;
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0;
-}
-
-.middle-cross::after { /* Foreground */
-    background: red;
-    background-clip: text;
-    color: transparent;
-}
-
-.middle-cross::before { /* Shadow */
-    color: transparent;
-}
-
-/* This works, why? I haven't the faintest */
-.middle-cross-animation::after,
-.middle-cross-animation::before {
-    animation: ka 2s forwards;
-}
-
-.v-and-h-cross {
-    top: 19%;
-    width: 10px;
-    height: 80px;
-    border-radius: 100% / 100%;
-    background-color: red;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    box-shadow:
-        0 0 15px 10px red,
-        0 0 60px 15px red,
-        0 0 90px 20px red;
-}
-
-.v-and-h-cross:nth-child(1) {
-    top: 19%;
-    left: 50%;
-}
-
-.v-and-h-cross:nth-child(2) {
-    top: 19%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    height: 150px;
-}
-
-@keyframes ka {
-    0% {
-        transform: translate(-50%, -50%) scale(1.2);
-        text-shadow: 0 0 12px red;
-        opacity: 1;
-    }
-    80% { text-shadow: 0 0 12px red; }
-    90% {
-        transform: translate(-50%, -50%) scale(0.1);
-        text-shadow: 0 0 2px red;
-    }
-    100% { opacity: 0; }
-}
-
-@keyframes ig {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    80% { opacity: 1; }
-    100% {
-        box-shadow:
-            0 0 5px 4px red;
-        transform: translate(-50%, -50%) scale(1, 0.1);
-        opacity: 0;
-    }
-}
-
-@keyframes an {
-    0% {
-        transform: translate(-50%, -50%) rotate(90deg) scale(1);
-        opacity: 1;
-    }
-    80% { opacity: 1; }
-    100% {
-        box-shadow:
-            0 0 5px 2px red;
-        transform: translate(-50%, -50%) rotate(90deg) scale(0.2, 2);
-        opacity: 0;
-    }
-}
-
-@keyframes descend {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
 .iris{
     position: fixed;
     top: -2%;
@@ -132,6 +13,7 @@ body {
     transform: translate(-50%, 0%);
     font-family: 'JetBrains Mono', monospace;
     font-size: 30px;
+    color: white;
 }
 .pupil{
     position: fixed;
@@ -140,5 +22,84 @@ body {
     transform: translate(-50%, 0%);
     font-family: 'JetBrains Mono', monospace;
     font-size: 30px;
-    color: red;
+    background: radial-gradient(rgba(255,0,0,1) 0%, rgb(97, 8, 40) 10%, rgb(78, 2, 0) 20%, rgb(40, 0, 1) 30%, rgb(148, 2, 14) 40%, rgb(224, 3, 21) 50%, rgb(246, 16, 37) 60%, rgb(255, 36, 64) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%) 0 0/100% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: a 2s linear infinite;
 }
+@keyframes a {
+    to {background-position:0 -200%;}
+}
+.center{
+    position :fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333333;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: white;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.input_div input{
+    position: relative;
+    left:-25px;
+    top: -20px;
+    padding: 0 10px;
+    height: 40px;
+    width: 420px;
+    font-size: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #b9f999;
+    border: 0px;
+    border-radius: 3px;
+    background-color: grey;
+    margin-top: -90%;
+    transition: box-shadow .3s;
+}
+.input_div input:hover{
+    transition: .5s; /* Not necessary but feels smooth */
+    outline: none;
+    border-color: #b9f999;
+    box-shadow: 0 0 10px #b9f999;
+}
+.input_div input:focus{
+    outline: none;
+    border-color: #b9f999;
+    box-shadow: 0 0 10px #b9f999;
+}
+input[type="submit"]{
+    position: relative;
+    left: 419px;
+    top: -60px;
+    width:10%;
+    height: 40px;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    background: grey;
+    outline: none;
+    border: 0px;
+    border-radius: 3px;
+    transition: box-shadow .3s;
+}
+input[type="submit"]:hover{
+    transition: .5s; /* Not necessary but feels smooth */
+    outline: none;
+    border-color: #b9f999;
+    box-shadow: 0 0 10px #b9f999;
+}
+#decide
+{
+    transform: scale(1);
+    transition: transform 0.6s ease-in-out;
+}
+

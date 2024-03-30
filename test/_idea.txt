@@ -1,6 +1,3 @@
-add start button or some sort
-sessions to check that startup animation is played, no need to play again until session gone
-
 red text matrix in main page pupil
 
 rainbow input box and enter instead of glowing, comfortaa feeling
