@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 
-const uri = 'mongodb+srv://(LESTRING)/(DBNAME)?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://<username>:<password>@<mongodburl>/<dbname>?retryWrites=true&w=majority&appName=Cluster0';
 
 const IDSchema = new mongoose.Schema({
     identification: {

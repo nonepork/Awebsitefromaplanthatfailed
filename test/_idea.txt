@@ -1,5 +1,5 @@
 add start button or some sort
-cookies to check that startup animation is played, no need to play again until session gone
+sessions to check that startup animation is played, no need to play again until session gone
 
 red text matrix in main page pupil
 
