@@ -1,0 +1,118 @@
+/*
+div {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+div:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(
+        0.3turn,
+        #ed919f 17%,
+        #f6b28a 17% 34%,
+        #f0d9a9 34% 51%,
+        #afdf9f 51% 68%,
+        #95b6f6 68% 85%,
+        #cdaaf7 85%
+    );
+    animation: totheRight 2s infinite linear;
+}
+@keyframes totheRight {
+    to {background-position:0 -200%}
+}
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #1E1E1E;
+    font-family: 'JetBrains Mono', monospace;
+    height: 100vh;
+    overflow: hidden;
+}
+.center{
+    position :fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333333;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: white;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.input_div input{
+    position: relative;
+    left:-25px;
+    top: -20px;
+    padding: 0 10px;
+    height: 40px;
+    width: 420px;
+    font-size: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+    border: 0px;
+    border-radius: 3px;
+    background-color: grey;
+    margin-top: -90%;
+    transition: box-shadow .3s;
+}
+.input_div input:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        0.3turn,
+        #ed919f 17%,
+        #f6b28a 17% 34%,
+        #f0d9a9 34% 51%,
+        #afdf9f 51% 68%,
+        #95b6f6 68% 85%,
+        #cdaaf7 85%
+    );
+}
+.input_div input:hover:before{
+    outline: none;
+    background-position: -106.25em;
+    transition: 10s linear;
+}
+input[type="submit"]{
+    position: relative;
+    left: 419px;
+    top: -60px;
+    width:10%;
+    height: 40px;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    font-size: 20px;
+    background: grey;
+    outline: none;
+    border: 0px;
+    border-radius: 3px;
+    transition: box-shadow .3s;
+}
+input[type="submit"]:hover{
+    transition: .5s; /* Not necessary but feels smooth */
+    outline: none;
+    border-color: #b9f999;
+    box-shadow: 0 0 10px #b9f999;
+}
