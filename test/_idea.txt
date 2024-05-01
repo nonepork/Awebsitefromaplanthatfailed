@@ -1,4 +1,2 @@
-red text matrix in main page pupil
-
-rainbow input box and enter instead of glowing, comfortaa feeling
-https://www.youtube.com/watch?v=KnYwz3ksW7E
+dont show submit button until value entered, once entered show button and smoothly shorten input box
+and add gradient border as well, but cut on blank section

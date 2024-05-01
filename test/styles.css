@@ -59,21 +59,49 @@ body{
     font-family: 'JetBrains Mono', monospace;
     color: white;
     border: 0px;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: grey;
     margin-top: -90%;
-    transition: box-shadow .3s;
-}
-.input_div input:hover{
-    transition: .5s; /* Not necessary but feels smooth */
     outline: none;
-    border-color: #b9f999;
-    box-shadow: 0 0 10px #b9f999;
 }
-.input_div input:focus{
-    outline: none;
-    border-color: #b9f999;
-    box-shadow: 0 0 10px #b9f999;
+.input_div .rainbow_input{
+    height: 40px;
+    width: 440px;
+    position: absolute;
+    top: 43%;
+    left: 2.8%;
+    border-radius: 5px;
+    z-index: -2;
+}
+.input_div .rainbow_input::before{
+    content: "";
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(
+        0.3turn,
+        #ed919f 0%,
+        #f6b28a 25.5%,
+        #f0d9a9 42.5%,
+        #afdf9f 59.5%,
+        #95b6f6 76.5%,
+        #cdaaf7 93.5%,
+        #ed919f 100%
+    );
+    animation: totheRight 2s linear infinite;
+    transition: 0.2s;
+}
+@keyframes totheRight {
+    to {background-position-x:441px;}
+}
+.input_div input:hover ~ .rainbow_input::before,
+.input_div input:focus ~ .rainbow_input::before{
+    width: 103%;
+    height: 130%;
 }
 input[type="submit"]{
     position: relative;
@@ -97,6 +125,7 @@ input[type="submit"]:hover{
     border-color: #b9f999;
     box-shadow: 0 0 10px #b9f999;
 }
+*/
 #decide
 {
     transform: scale(1);
