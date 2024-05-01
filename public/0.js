@@ -1,5 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
-    var star = document.getElementById("middle-cross");
+window.addEventListener("DOMContentLoaded", () => { var star = document.getElementById("middle-cross");
     var intro = document.getElementById("intro");
     var middleCross = document.querySelector(".middle-cross");
     var vAndHCross1 = document.getElementsByClassName('v-and-h-cross')[0];
@@ -39,18 +38,47 @@ window.addEventListener("DOMContentLoaded", () => {
 
     loadIntro();
 
-    const textContent = document.getElementById("decide")
+    const textContent = document.getElementById("decide");
     const form = document.getElementById('form');
 
     const button = document.getElementById('button');
-    const box = document.getElementById('input_bar')
-    const iris = document.getElementById('iris')
-    const pupil = document.getElementById('pupil')
-    const coolbox = document.getElementById('coolbox')
+    const input = document.getElementById('input_bar');
+    const iris = document.getElementById('iris');
+    const pupil = document.getElementById('pupil');
+    const coolbox = document.getElementById('coolbox');
+    const rainbowInput = document.querySelector('.rainbow_input');
+    const rainbowButton = document.querySelector('.rainbow_button');
+    let secPercentage = 0;
+    let aCond = false;
+
+    function updateBackgroundPosition() {
+        secPercentage = parseInt(getComputedStyle(pupil).backgroundPosition.split(' ')[1].slice(0, -1));
+        if (secPercentage !== -139) {
+            requestAnimationFrame(updateBackgroundPosition);
+        } else {
+            pupil.style.animationPlayState = 'paused';
+        }
+    }
+
+    input.addEventListener('input', function(e) {
+        if (e.target.value != '') {
+            if (!aCond) {
+                updateBackgroundPosition(); 
+                aCond = true;
+                button.style.display = 'block';
+                button.style.borderRadius = '0px 5px 5px 0px';
+            }
+        } else {
+            pupil.style.animationPlayState = 'running';
+            aCond = false;
+            button.style.display = 'none';
+            button.style.borderRadius = '5px';
+        }
+    });
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const value = document.getElementById("input_bar").value
+        const value = input.value
         fetch('/goblet_of_fire', {
             method: 'POST',
             headers: {
@@ -60,15 +88,17 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
         button.style.display = "none";
-        box.style.display = "none";
+        input.style.display = "none";
         iris.style.display = "none";
         pupil.style.display = "none";
+        rainbowInput.style.display = "none";
+        rainbowButton.style.display = "none";
         coolbox.style.backgroundColor = "#1E1E1E";
         setTimeout(function(){
             textContent.style.transform = "scale(" + 2 + ")";
             setTimeout(function(){
                 new Typed(textContent, {
-                    strings: ["", "Thanks for your participation"],
+                    strings: ["", "Thanks for your participation."],
                     typeSpeed: 120,
                     backSpeed: 40,
                     startDelay: 100,

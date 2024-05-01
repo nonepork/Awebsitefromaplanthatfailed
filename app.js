@@ -20,7 +20,7 @@ const collection = new mongoose.model('soul_who_chose_different_path', IDSchema)
 async function connect() {
     try {
         await mongoose.connect(uri);
-        console.log('Connected');
+        console.log('Happy hunting.');
     } catch (error) {
         console.error(error);
     }
@@ -52,7 +52,7 @@ app.post('/goblet_of_fire', (req, res) => {
     const data = {
         identification: req.body.value
     }
-    // TODO: add sanitization and filters
+    // NOTE: Add your sanitization and filters in here
     collection.insertMany(data);
     res.end();
 });

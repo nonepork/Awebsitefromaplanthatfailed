@@ -1,2 +1,0 @@
-dont show submit button until value entered, once entered show button and smoothly shorten input box
-and add gradient border as well, but cut on blank section
