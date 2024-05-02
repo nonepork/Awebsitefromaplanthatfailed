@@ -252,7 +252,7 @@ input[type="submit"]{
     transition: display .3s;
     z-index: -1;
 }
-.rainbow_button {
+.rainbow_button{
     transition: display .3s;
     height: 40px;
     width: 44px;
@@ -262,7 +262,7 @@ input[type="submit"]{
     border-radius: 5px;
     z-index: -2;
 }
-.rainbow_button:before {
+.rainbow_button:before{
     content: "";
     transform: translate(-50%, -50%);
     position: absolute;
@@ -292,7 +292,7 @@ input[type="submit"]:hover ~ .rainbow_button:before{
     border-radius: 0px 5px 5px 0px;
     box-shadow: 0 20px 35px rgba(0,0,0,0.3);
 }
-@keyframes totheRight {
+@keyframes totheRight{
     to {background-position-x:450px;}
 }
 #decide
