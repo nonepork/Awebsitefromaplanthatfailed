@@ -6,7 +6,7 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-.intro {
+.intro{
     position: fixed;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@ body{
     z-index: 100;
 }
 .middle-cross::after,
-.middle-cross::before {
+.middle-cross::before{
     position: fixed;
     top: 19%;
     left: 50%;
@@ -32,20 +32,20 @@ body{
     transform: translate(-50%, -50%) scale(1.2);
     opacity: 0;
 }
-.middle-cross::after { /* Foreground */
+.middle-cross::after{ /* Foreground */
     background: red;
     background-clip: text;
     color: transparent;
 }
-.middle-cross::before { /* Shadow */
+.middle-cross::before{ /* Shadow */
     color: transparent;
 }
 /* This works, why? I haven't the faintest */
 .middle-cross-animation::after,
-.middle-cross-animation::before {
+.middle-cross-animation::before{
     animation: ka 2s forwards;
 }
-.v-and-h-cross {
+.v-and-h-cross{
     top: 19%;
     width: 10px;
     height: 80px;
@@ -59,50 +59,50 @@ body{
         0 0 60px 15px red,
         0 0 90px 20px red;
 }
-.v-and-h-cross:nth-child(1) {
+.v-and-h-cross:nth-child(1){
     top: 19%;
     left: 50%;
 }
-.v-and-h-cross:nth-child(2) {
+.v-and-h-cross:nth-child(2){
     top: 19%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     height: 150px;
 }
-@keyframes ka {
-    0% {
+@keyframes ka{
+    0%{
         transform: translate(-50%, -50%) scale(1.2);
         text-shadow: 0 0 12px red;
         opacity: 1;
     }
-    80% { text-shadow: 0 0 12px red; }
-    90% {
+    80%{ text-shadow: 0 0 12px red; }
+    90%{
         transform: translate(-50%, -50%) scale(0.1);
         text-shadow: 0 0 2px red;
     }
-    100% { opacity: 0; }
+    100%{ opacity: 0; }
 }
 
-@keyframes ig {
-    0% {
+@keyframes ig{
+    0%{
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
-    80% { opacity: 1; }
-    100% {
+    80%{ opacity: 1; }
+    100%{
         box-shadow:
             0 0 5px 4px red;
         transform: translate(-50%, -50%) scale(1, 0.1);
         opacity: 0;
     }
 }
-@keyframes an {
-    0% {
+@keyframes an{
+    0%{
         transform: translate(-50%, -50%) rotate(90deg) scale(1);
         opacity: 1;
     }
-    80% { opacity: 1; }
-    100% {
+    80%{ opacity: 1; }
+    100%{
         box-shadow:
             0 0 5px 2px red;
         transform: translate(-50%, -50%) rotate(90deg) scale(0.2, 2);
@@ -110,9 +110,9 @@ body{
     }
 }
 
-@keyframes descend {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+@keyframes descend{
+    0%{ opacity: 1; }
+    100%{ opacity: 0; }
 }
 
 .iris{
@@ -147,8 +147,8 @@ body{
    -ms-user-select: none;
    user-select: none;
 }
-@keyframes a {
-    to {background-position:0 -200%;}
+@keyframes a{
+    to{background-position:0 -200%;}
 }
 .center{
     position :fixed;
@@ -293,7 +293,7 @@ input[type="submit"]:hover ~ .rainbow_button:before{
     box-shadow: 0 20px 35px rgba(0,0,0,0.3);
 }
 @keyframes totheRight{
-    to {background-position-x:450px;}
+    to{background-position-x:450px;}
 }
 #decide
 {
