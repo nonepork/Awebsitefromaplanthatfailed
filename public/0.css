@@ -218,8 +218,8 @@ body{
         #95b6f6 76.5%,
         #cdaaf7 93.5%,
         #ed919f 100%
-    );
-    animation: totheRight 2s linear infinite;
+    ) 0 0/200% 100%;
+    animation: totheRight 4s linear infinite;
     transition: 0.2s;
 }
 .input_div input:hover ~ .rainbow_input::before,
@@ -280,9 +280,9 @@ input[type="submit"]{
         #95b6f6 76.5%,
         #cdaaf7 93.5%,
         #ed919f 100%
-    );
-    background-size: 300% 100%;
-    animation: totheRight 8s linear infinite;
+    ) 0 0/200% 100%;
+    animation-delay: 1s;
+    animation: totheRight 2s linear infinite;
     transition: 0.2s;
 }
 input[type="submit"]:hover ~ .rainbow_button:before{
@@ -293,7 +293,7 @@ input[type="submit"]:hover ~ .rainbow_button:before{
     box-shadow: 0 20px 35px rgba(0,0,0,0.3);
 }
 @keyframes totheRight{
-    to{background-position-x:450px;}
+    to{background-position:-200% 0;}
 }
 #decide
 {
